@@ -1,7 +1,7 @@
 import requests
 import json
 
-endpoint = "http://188.40.187.241:9000/aliens"
+endpoint = "http://localhost:9000/aliens"
 
 for i in range(1, 1001):
     data = {

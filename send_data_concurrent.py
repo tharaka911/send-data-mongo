@@ -2,7 +2,7 @@ import requests
 import json
 import threading
 
-endpoint = "http://188.40.187.241:9000/aliens"
+endpoint = "http://localhost:9000/aliens"
 
 def send_data(i):
     data = {
