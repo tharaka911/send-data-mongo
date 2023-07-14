@@ -22,7 +22,7 @@ def send_data(i):
 threads = []
 
 # Launch concurrent requests
-for i in range(1, 1001):
+for i in range(1, 10001):
     thread = threading.Thread(target=send_data, args=(i,))
     thread.start()
     threads.append(thread)
