@@ -1,13 +1,14 @@
 import requests
 import json
 import threading
+import time
 
 endpoint = "http://localhost:9000/aliens"
 
 def send_data(i):
     data = {
-        "name": f"no{i}_lakshan"+"k"*i*i,
-        "tech": f"tech{i}"+"k"*i*i,
+        "name": f"no{i}_lakshan"+"k"*i,
+        "tech": f"tech{i}"+"k"*i,
         "sub": True
     }
 
@@ -22,7 +23,8 @@ def send_data(i):
 threads = []
 
 # Launch concurrent requests
-for i in range(1, 10001):
+start_time = time.time()  # Start time
+for i in range(1, 11):
     thread = threading.Thread(target=send_data, args=(i,))
     thread.start()
     threads.append(thread)
@@ -31,4 +33,7 @@ for i in range(1, 10001):
 for thread in threads:
     thread.join()
 
-print("All requests completed.")
+end_time = time.time()  # End time
+total_time = end_time - start_time
+
+print(f"All requests completed. Total time: {total_time} seconds.")
