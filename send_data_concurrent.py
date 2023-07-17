@@ -6,8 +6,8 @@ endpoint = "http://localhost:9000/aliens"
 
 def send_data(i):
     data = {
-        "name": f"no{i}_lakshan"+"t"*i,
-        "tech": f"tech{i}"+"t"*i,
+        "name": f"no{i}_lakshan"+"k"*i*i,
+        "tech": f"tech{i}"+"k"*i*i,
         "sub": True
     }
 

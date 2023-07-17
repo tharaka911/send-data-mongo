@@ -3,7 +3,7 @@ import json
 
 endpoint = "http://localhost:9000/aliens"
 
-for i in range(1, 1001):
+for i in range(1, 11):
     data = {
         "name": f"no{i}_lakshan",
         "tech": f"tech{i}",
