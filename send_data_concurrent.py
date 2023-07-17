@@ -24,7 +24,7 @@ threads = []
 
 # Launch concurrent requests
 start_time = time.time()  # Start time
-for i in range(1, 11):
+for i in range(1, 10001):
     thread = threading.Thread(target=send_data, args=(i,))
     thread.start()
     threads.append(thread)
